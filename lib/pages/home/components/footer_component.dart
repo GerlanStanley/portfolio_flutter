@@ -15,7 +15,7 @@ class FooterComponent extends StatelessWidget {
     const double spaceBetween = 20;
     return Container(
       color: ColorsConstants.primary,
-      padding: const EdgeInsets.symmetric(vertical: 70),
+      padding: const EdgeInsets.symmetric(vertical: 70, horizontal: 20),
       child: Column(
         children: [
           Text(

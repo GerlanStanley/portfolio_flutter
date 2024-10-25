@@ -17,7 +17,7 @@ class ImagesConstants {
 }
 
 class ColorsConstants {
-  static Color primary = const Color(0xFF6E07F3);
+  static Color primary = const Color(0xFF0068d1);
   static Color secondary = const Color(0xFF0068d1);
   static Color secondaryBackground = const Color(0xFFebf5ff);
   static Color textPrimary = const Color(0xFF141c3a);
@@ -27,6 +27,7 @@ class ColorsConstants {
 class SizeConstants {
   static double maxWidthContainer = 1000;
   static double maxWidthText = 750;
+  static double verySmallScreen = 400;
   static double smallScreen = 500;
   static double mediumScreen = 600;
 }

@@ -26,7 +26,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScrollView(
-        // controller: _controller,
         slivers: <Widget>[
           SliverPersistentHeader(
             pinned: true,

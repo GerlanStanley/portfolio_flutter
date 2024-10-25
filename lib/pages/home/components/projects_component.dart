@@ -36,7 +36,7 @@ class ProjectsComponent extends StatelessWidget {
     ProjectModel(
       title: 'Portfólio',
       description: 'O código desse portfólio que foi desenvolvido com Flutter',
-      urlWeb: 'https://github.com/GerlanStanley/portfolio',
+      urlWeb: 'https://github.com/GerlanStanley/portfolio_flutter',
     ),
   ];
 
@@ -50,7 +50,11 @@ class ProjectsComponent extends StatelessWidget {
     double childAspectRatio = 2;
     if (size.width < SizeConstants.smallScreen) {
       countAxisSize = 1;
-      childAspectRatio = 1.65;
+      childAspectRatio = 1.6;
+    }
+    if (size.width < SizeConstants.verySmallScreen) {
+      countAxisSize = 1;
+      childAspectRatio = 1.4;
     }
     if (size.width > SizeConstants.smallScreen) {
       countAxisSize = 1;
@@ -108,6 +112,7 @@ class ProjectsComponent extends StatelessWidget {
               maxWidth: SizeConstants.maxWidthContainer,
             ),
             child: GridView.count(
+              physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               crossAxisCount: countAxisSize,
               mainAxisSpacing: 20,

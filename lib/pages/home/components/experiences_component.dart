@@ -24,15 +24,14 @@ class ExperiencesComponent extends StatelessWidget {
               'dos clientes; informam a localização em tempo real '
               'para os clientes; atualizar o status final do pedido.',
           urlPlayStore:
-          'https://play.google.com/store/apps/details?id=br.com.mateusmais.delivery.deliveryman.app&hl=pt_BR',
+              'https://play.google.com/store/apps/details?id=br.com.mateusmais.delivery.deliveryman.app&hl=pt_BR',
           urlAppStore:
-          'https://apps.apple.com/br/app/mateus-mais-entregas/id6463452582',
+              'https://apps.apple.com/br/app/mateus-mais-entregas/id6463452582',
         ),
         ProjectModel(
           image: ImagesConstants.mmCollector,
           title: 'Mateus Mais Coletor',
-          description:
-          'Aplicativo em que os funcionários do supermercado '
+          description: 'Aplicativo em que os funcionários do supermercado '
               'iniciam e finalizam a coleta de itens do pedido. '
               'É feito uma leitura do código de barras dos produtos '
               'que estão sendo coletados; informe de quantidade e '
@@ -40,10 +39,8 @@ class ExperiencesComponent extends StatelessWidget {
         ),
         ProjectModel(
           image: ImagesConstants.mmLogo,
-          title:
-          'Link de rastreio para os pedidos do app Mateus Mais',
-          description:
-          'Uma página web para acompanhar a localização '
+          title: 'Link de rastreio para os pedidos do app Mateus Mais',
+          description: 'Uma página web para acompanhar a localização '
               'em tempo real do entregador.',
         ),
       ],
@@ -61,45 +58,41 @@ class ExperiencesComponent extends StatelessWidget {
           description: 'Aplicativo para gerenciamento e emissão de '
               'cobranças via pix, cartão, boleto e carnê.',
           urlPlayStore:
-          'https://play.google.com/store/apps/details?id=br.sautotecnologia.sautopay&hl=pt_BR',
-          urlAppStore:
-          'https://apps.apple.com/mt/app/sautopay/id1623389742',
+              'https://play.google.com/store/apps/details?id=br.sautotecnologia.sautopay&hl=pt_BR',
+          urlAppStore: 'https://apps.apple.com/mt/app/sautopay/id1623389742',
         ),
         ProjectModel(
           image: ImagesConstants.obaDelivery,
           title: 'Oba Delivery',
-          description:
-          'Aplicativo de delivery online que conecta vários '
+          description: 'Aplicativo de delivery online que conecta vários '
               'restaurantes e empresas em uma única plataforma digital.',
           urlPlayStore:
-          'https://play.google.com/store/apps/details?id=sautotecnologia.br.obadelivery&hl=pt_BR',
+              'https://play.google.com/store/apps/details?id=sautotecnologia.br.obadelivery&hl=pt_BR',
           urlAppStore:
-          'https://apps.apple.com/br/app/oba-delivery/id1571332677',
+              'https://apps.apple.com/br/app/oba-delivery/id1571332677',
         ),
         ProjectModel(
           image: ImagesConstants.sautoGerencial,
           title: 'Sauto Gerencial',
-          description:
-          'Aplicativo para venda externa no qual o vendedor '
+          description: 'Aplicativo para venda externa no qual o vendedor '
               'tem acesso a visualizar clientes, produtos, históricos de '
               'pedidos, registrar visita ao cliente e emitir um novo '
               'pedido ou orçamento.',
           urlPlayStore:
-          'https://play.google.com/store/apps/details?id=sautotecnologia.br.sautogerencial&hl=pt_BR',
+              'https://play.google.com/store/apps/details?id=sautotecnologia.br.sautogerencial&hl=pt_BR',
           urlAppStore:
-          'https://apps.apple.com/br/app/sauto-gerencial/id1144468304',
+              'https://apps.apple.com/br/app/sauto-gerencial/id1144468304',
         ),
         ProjectModel(
           image: ImagesConstants.youdEducDiary,
           title: 'YouEduc: Diário',
-          description:
-          'Uma ferramenta desenvolvida para auxiliar e '
+          description: 'Uma ferramenta desenvolvida para auxiliar e '
               'simplificar o dia a dia de professores, coordenadores e '
               'gestores da educação. Com o diário Online toda escola pode '
               'analisar, de forma simples e rápida, estatísticas de '
               'acompanhamento de frequência, notas e média dos alunos.',
           urlPlayStore:
-          'https://play.google.com/store/apps/details?id=sautotecnologia.br.sautogerencial&hl=pt_BR',
+              'https://play.google.com/store/apps/details?id=sautotecnologia.br.sautogerencial&hl=pt_BR',
         ),
       ],
     ),
@@ -182,6 +175,7 @@ class ExperiencesComponent extends StatelessWidget {
               maxWidth: SizeConstants.maxWidthContainer,
             ),
             child: MasonryGridView.count(
+              physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               crossAxisCount: countAxisSize,
               mainAxisSpacing: 20,
@@ -189,7 +183,7 @@ class ExperiencesComponent extends StatelessWidget {
               itemCount: projects.length,
               itemBuilder: (context, index) {
                 return projects[index];
-              }
+              },
             ),
           ),
         ),

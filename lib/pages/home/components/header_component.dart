@@ -16,18 +16,26 @@ class HeaderComponent extends StatelessWidget {
         children: [
           Container(
             margin: EdgeInsets.only(
-                top: size.width >= SizeConstants.maxWidthContainer ? 70 : 50),
+              top: size.width >= SizeConstants.maxWidthContainer ? 70 : 50,
+              left: 20,
+              right: 20,
+            ),
             child: Text(
               'Desenvolvedor Mobile',
               style: Theme.of(context).textTheme.displayLarge,
+              textAlign: TextAlign.center,
             ),
           ),
           Container(
             margin: EdgeInsets.only(
-                top: size.width >= SizeConstants.maxWidthContainer ? 20 : 16),
+              top: size.width >= SizeConstants.maxWidthContainer ? 20 : 16,
+              left: 20,
+              right: 20,
+            ),
             child: Text(
               'Adoro criar apps incríveis com código limpo e eficiente!',
               style: Theme.of(context).textTheme.displayMedium,
+              textAlign: TextAlign.center,
             ),
           ),
           Container(

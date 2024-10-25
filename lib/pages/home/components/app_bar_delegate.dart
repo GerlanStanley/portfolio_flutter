@@ -39,83 +39,68 @@ class AppBarDelegate extends SliverPersistentHeaderDelegate {
         margin: const EdgeInsets.symmetric(horizontal: 20),
         child: Row(
           children: [
-            Expanded(
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: InkWell(
-                  onTap: () async {
-                    Scrollable.ensureVisible(
-                      homeKey.currentContext!,
-                      duration: const Duration(milliseconds: 1000),
-                      curve: Curves.easeInOut,
-                    );
-                  },
-                  child: Image.asset(
-                    ImagesConstants.gsLogo,
-                    height: 40,
-                    fit: BoxFit.fitHeight,
-                  ),
-                ),
-              ),
-            ),
-            Center(
-              child: TextButton(
-                onPressed: () async {
+            Align(
+              alignment: Alignment.centerLeft,
+              child: InkWell(
+                onTap: () async {
                   Scrollable.ensureVisible(
                     homeKey.currentContext!,
                     duration: const Duration(milliseconds: 1000),
                     curve: Curves.easeInOut,
                   );
                 },
-                child: const Text('Início'),
+                child: Image.asset(
+                  ImagesConstants.gsLogo,
+                  height: 40,
+                  fit: BoxFit.fitHeight,
+                ),
               ),
             ),
-            Center(
-              child: TextButton(
-                onPressed: () async {
-                  Scrollable.ensureVisible(
-                    aboutKey.currentContext!,
-                    duration: const Duration(milliseconds: 1000),
-                    curve: Curves.easeInOut,
-                  );
-                },
-                child: const Text('Sobre'),
-              ),
-            ),
-            Center(
-              child: TextButton(
-                onPressed: () async {
-                  Scrollable.ensureVisible(
-                    experiencesKey.currentContext!,
-                    duration: const Duration(milliseconds: 1000),
-                    curve: Curves.easeInOut,
-                  );
-                },
-                child: const Text('Experiências'),
-              ),
-            ),
-            Center(
-              child: TextButton(
-                onPressed: () async {
-                  Scrollable.ensureVisible(
-                    projectsKey.currentContext!,
-                    duration: const Duration(milliseconds: 1000),
-                    curve: Curves.easeInOut,
-                  );
-                },
-                child: const Text('Projetos'),
-              ),
-            ),
-            Center(
-              child: TextButton(
-                onPressed: () async {
-                  Scrollable.ensureVisible(
-                    contactKey.currentContext!,
-                    duration: const Duration(milliseconds: 1000),
-                    curve: Curves.easeInOut,
-                  );
-                },
-                child: const Text('Contato'),
+            Expanded(
+              child: Wrap(
+                alignment: WrapAlignment.end,
+                children: [
+                  TextButton(
+                    onPressed: () async {
+                      Scrollable.ensureVisible(
+                        aboutKey.currentContext!,
+                        duration: const Duration(milliseconds: 1000),
+                        curve: Curves.easeInOut,
+                      );
+                    },
+                    child: const Text('Sobre'),
+                  ),
+                  TextButton(
+                    onPressed: () async {
+                      Scrollable.ensureVisible(
+                        experiencesKey.currentContext!,
+                        duration: const Duration(milliseconds: 1000),
+                        curve: Curves.easeInOut,
+                      );
+                    },
+                    child: const Text('Experiências'),
+                  ),
+                  TextButton(
+                    onPressed: () async {
+                      Scrollable.ensureVisible(
+                        projectsKey.currentContext!,
+                        duration: const Duration(milliseconds: 1000),
+                        curve: Curves.easeInOut,
+                      );
+                    },
+                    child: const Text('Projetos'),
+                  ),
+                  TextButton(
+                    onPressed: () async {
+                      Scrollable.ensureVisible(
+                        contactKey.currentContext!,
+                        duration: const Duration(milliseconds: 1000),
+                        curve: Curves.easeInOut,
+                      );
+                    },
+                    child: const Text('Contato'),
+                  ),
+                ],
               ),
             ),
           ],
