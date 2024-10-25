@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../core/constants/constants.dart';
 import 'contact_button.dart';
@@ -59,12 +61,14 @@ class FooterComponent extends StatelessWidget {
                 const SizedBox(width: spaceBetween),
                 ContactButton(
                   onPressed: () async {
-                    await launchUrl(
-                      Uri(
-                        scheme: 'mailto',
-                        path: 'gerlanstanley@outlook.com',
-                      ),
-                    );
+                    String mailUrl = 'mailto:gerlanstanley@outlook.com';
+                    try {
+                      await launchUrlString(mailUrl);
+                    } catch (e) {
+                      await Clipboard.setData(
+                        const ClipboardData(text: 'gerlanstanley@outlook.com'),
+                      );
+                    }
                   },
                   icon: FontAwesomeIcons.envelope,
                 ),
